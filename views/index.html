@@ -1,5 +1,41 @@
 <%include header.html%>
+<script>
+  function showscale(){
+    
+  }
+  $(document).ready(function(){
+    var eq = "5+((4*sin(x))+(5*cos(x)))^2";
+    $("#okBtn").click(function(){
+      var inp = $("#equation").val()
+      var spt1 = eq.split('')
+      console.log(inp)
+    })
+    $("#scale").click(function(){
+      if($("#scale").prop("checked")){
+        showscale();
+      }
+    })
+  })
 
-<h1>Hello World</h1>
+</script>
+<div class="container">
+  <div class="onhover">
+    <div class="col-md-9 graph">
+    
+    </div>
+    <div class="col-md-3 eqnInput">
+      <div class="form-group">
+      <label for="eqn">Equation</label>
+      <input class="form-control" id="eqn" placeholder="enter your equation">
+      <button class="btn btn-info btn-block" type="">Plot</button>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="scale" value="" >With scale
+        </label>
+      </div>  
+    </div>
+    </div>  
+  </div>
+</div>
 
 <%include footer.html%>
